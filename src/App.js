@@ -6,8 +6,6 @@ import DateButton from './components/DateButton';
 import styled from "styled-components";
 
 const StyledApp = styled.div`
-  width: 80%;
-  margin: 0 auto;
   background-color: blue;
 `;
 
@@ -41,6 +39,7 @@ function App() {
 
   return (
     <StyledApp className="App">
+      <h1>🚀 NASA Photo of the Day! 🚀</h1>
       <DateButton setRandomDate={setRandomDate} randomDay={randomDay}/>
       {/* {content.map((item, index) => ( <CardCreator key={index} title={content.title} date={content.date} url={content.url} explanation={content.explanation} /> ))} */}
       <CardCreator title={content.title} date={content.date} url={content.url} explanation={content.explanation} />

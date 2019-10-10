@@ -10,6 +10,9 @@ const StyledDateButton = styled.div`
     
     Button {
         width: 200px;
+        margin: 5px;
+        border: 1px solid black;
+        background-color: red;
     }
 `;
 
@@ -21,7 +24,7 @@ const DateButton = (props) => {
 
     return (
         <StyledDateButton>
-            <Button onClick={() => Randomizer()}>Random Date</Button>
+            <Button onClick={() => Randomizer()}>Date Randomizer</Button>
         </StyledDateButton>
     );
 };

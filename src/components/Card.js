@@ -1,32 +1,24 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
-import styled from "styled-components";
-
-const StyledCard = styled.div`
-    Card {
-        CardBody {
-            display: flex;
-            background-color: blue;
-            CardTitle {
-                background-color: blue;
-            }
-        }
-    }
-    
-`;
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Container, Col, Row } from 'reactstrap';
 
 const CardCreator = (props) => {
     return (
-        <StyledCard>
-          <Card>
-            <CardBody>
-                <CardTitle>{props.title}</CardTitle>
-                <CardSubtitle>DATE: {props.date}</CardSubtitle>
-                <CardImg top width="100%" src={props.url} alt='space stars moon planet spacecraft satellite NASA' />
-                <CardText>{props.explanation}</CardText>
-            </CardBody>
-          </Card>
-        </StyledCard>
+        
+        // <Row>
+            <Col sm="12" md={{ size: 8, offset: 2 }}>
+                <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                    <CardBody>
+                        <CardTitle>{props.title}</CardTitle>
+                        <CardSubtitle>DATE: {props.date}</CardSubtitle>
+                        <Col sm="12" md={{ size: 8, offset: 2 }}>
+                            <CardImg top width="100%" src={props.url} alt='space stars moon planet spacecraft satellite NASA' />
+                        </Col>
+                        <CardText>{props.explanation}</CardText>
+                    </CardBody>
+                </Card>
+            </Col>
+        // </Row>
+        
       );
 };
 
